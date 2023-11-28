@@ -1,4 +1,22 @@
 # Upload Image API
+API that allows any user to upload an image in PNG or JPG format. Users are able to list their images. There are three builtin account tiers: Basic, Premium and Enterprise:
+* users that have "Basic" plan after uploading an image get:
+  * a link to a thumbnail that's 200px in height
+* users that have "Premium" plan get:
+  * a link to a thumbnail that's 200px in height
+  * a link to a thumbnail that's 400px in height
+  * a link to the originally uploaded image
+* users that have "Enterprise" plan get
+  * a link to a thumbnail that's 200px in height
+  * a link to a thumbnail that's 400px in height
+  * a link to the originally uploaded image
+  * ability to fetch an expiring link to the image (the link expires after a given number of seconds (the user can specify any number between 300 and 30000))
+
+Apart from the builtin tiers, admins are able to create arbitrary tiers with the following things configurable:
+* arbitrary thumbnail sizes
+* presence of the link to the originally uploaded file
+* ability to generate expiring links
+
 ## Environment
 ### Initial setup
 You will need to have at least Python 3.10 and [Docker](https://www.docker.com/) installed.
